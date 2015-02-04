@@ -98,7 +98,7 @@ static int check_vendor_module()
     return rv;
 }
 
-static char *camera_fixup_getparams(int id, const char *settings)
+static char *camera_fixup_getparams(int __attribute__((unused)) id, const char *settings)
 {
     int rotation = 0;
     const char *captureMode = "normal";
@@ -628,6 +628,7 @@ static int camera_device_open(const hw_module_t *module, const char *name,
         rv = gVendorModule->common.methods->open(
                 (const hw_module_t*)gVendorModule, name,
                 (hw_device_t**)&(camera_device->vendor));
+
         if (rv) {
             ALOGE("vendor camera open fail");
             goto fail;
