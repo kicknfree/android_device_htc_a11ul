@@ -66,6 +66,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02008000 --dt device/htc/a11ul/dtb --tags_offset 0x01e00000
 TARGET_KERNEL_CONFIG := a11ul_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/a11ul
+TARGET_PREBUILT_KERNEL := device/htc/a11ul/kernel
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
